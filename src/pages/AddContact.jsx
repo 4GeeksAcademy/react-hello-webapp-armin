@@ -8,35 +8,59 @@ export const AddContact = () => {
 
   return (
     <div className="container">
-      <ul className="list-group">
-        {/* Map over the 'todos' array from the store and render each item as a list element */}
-        {store && store.todos?.map((item) => {
-          return (
-            <li
-              key={item.id}  // React key for list items.
-              className="list-group-item d-flex justify-content-between"
-              style={{ background: item.background }}> 
-              
-              {/* Link to the detail page of this todo. */}
-              <Link to={"/single/" + item.id}>Link to: {item.title} </Link>
-              
-              <p>Open file ./store.js to see the global store that contains and updates the list of colors</p>
-              
-              <button className="btn btn-success" 
-                onClick={() => dispatch({
-                  type: "add_task", 
-                  payload: { id: item.id, color: '#ffa500' }
-                })}>
-                Change Color
-              </button>
-            </li>
-          );
-        })}
-      </ul>
-      <br />
+      <div className="d-flex justify-content-center">
+        <h1>Add a new Contact</h1>
 
-      <Link to="/">
-        <button className="btn btn-primary">Back home</button>
+      </div>
+      <form>
+        <div className="mb-3">
+          <label htmlFor="fullName" className="form-label">Full Name</label>
+          <input
+            type="text"
+            className="form-control"
+            id="fullName"
+            aria-describedby="emailHelp"
+            placeholder="Full Name"
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="email" className="form-label">Email</label>
+          <input
+            type="email"
+            className="form-control"
+            id="email"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="phone" className="form-label">Phone</label>
+          <input
+            type="tel"
+            className="form-control"
+            id="phone"
+            aria-describedby="emailHelp"
+            placeholder="Enter Phone"
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="address" className="form-label">Address</label>
+          <input
+            type="text"
+            className="form-control"
+            id="address"
+            placeholder="Enter address"
+          />
+        </div>
+        
+        <Link to="/">
+          <button className="btn btn-primary mb-3">Save</button>
+        </Link>
+
+      </form>
+
+      <Link className="form-check-label" htmlFor="exampleCheck1">
+        or get back to contacts
       </Link>
     </div>
   );
