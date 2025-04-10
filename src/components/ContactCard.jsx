@@ -18,9 +18,9 @@ export const ContactCard = () => {
 			</nav>
 
 
-			<div className="card d-flex  justify-content-between align-items-center" style={{width: "500px"}}>
-				<div className="">
-					<img src="https://avatar.iran.liara.run/public" className="card-img-top" alt="..." />
+			<div className="card d-flex flex-column justify-content-between mt-5 mx-5 p-5 align-items-center" style={{maxWidth: "18rem", minHeight: "400px"}}>
+				<div className="text-center mb-3">
+					<img src="https://avatar.iran.liara.run/public" className="card-img-top" alt="..." style={{width: "120px", height: "120px"}} />
 
 				</div>
 				<ul className="list-group list-group-flush d-flex gap-3">
@@ -31,7 +31,7 @@ export const ContactCard = () => {
 				</ul>
 				<div className="card-body d-flex gap-3">
 					<Link href="#" className="card-link btn btn-success">Editar</Link>
-					<button href="#" className="card-link btn btn-danger">Eliminar</button>
+					<button to="/" className="card-link btn btn-danger">Eliminar</button>
 				</div>
 			</div>
 
