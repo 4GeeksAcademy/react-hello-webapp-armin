@@ -1,7 +1,7 @@
 // Import necessary components from react-router-dom and other parts of the application.
 import {useNavigate } from "react-router-dom";
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx"; 
-import { createContac, getContacts } from "../services/fetchApi.js";
+import { createContac, getContacts } from "../Functions/Api.js";
 import React, { useState } from "react";
 import { Form } from "../components/Form.jsx";
 
